@@ -1,0 +1,22 @@
+.todo-container{
+    display:flex;
+    justify-content:space-evenly;
+    min-width:100%;
+    font-weight:bold;
+}
+.todo-child1{
+    min-width:5%;
+}
+.todo-child2{
+    min-width:5%;
+}
+.todo-child2{
+    min-width:5%;
+}
+.todo-child3{
+    min-width:5%;
+}
+.todo-child4{
+    min-width:90%;
+    text-align:left;
+}
