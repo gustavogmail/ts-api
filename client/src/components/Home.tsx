@@ -15,10 +15,7 @@ const Home = () => {
     }, []);
 
     const hasUsers = (): boolean => {
-        if (allUsers.length == 0) {
-            return false;
-        };
-        return true;
+        return allUsers.length === 0 ? false : true 
     };
 
     const setCurrentUser = (user_id: number) => ():any => {
