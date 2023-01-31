@@ -17,7 +17,7 @@
       "typeorm": "0.3.11"
    },
    "scripts": {
-      "start": "npm install -g ts-node && npm install -g typescript && npm install && ts-node src/index.ts",
+      "start": "npm install ts-node && npm install typescript && npm install && ts-node src/index.ts",
       "build": "cd client && npm install && npm run build",
       "typeorm": "typeorm-ts-node-commonjs"
    }
