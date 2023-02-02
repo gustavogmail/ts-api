@@ -12,7 +12,7 @@
       "typeorm": "0.3.11"
    },
    "scripts": {
-      "start": "node build/index.js",
+      "start": "npm install && node build/index.js",
       "build": "cd client && npm install && npm run build",
       "typeorm": "typeorm-ts-node-commonjs"
    },
