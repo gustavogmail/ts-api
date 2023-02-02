@@ -19,6 +19,9 @@ AppDataSource.initialize().then(async () => {
     const path = require('path');
     // Fazer com que o Node sirva os arquivos do app em React criado
     app.use(express.static(path.resolve(__dirname, '../client/build')));
+
+    const cors = require('cors');
+    app.use(cors);
     
     // register express routes from defined application routes
     Routes.forEach(route => {
@@ -32,9 +35,6 @@ AppDataSource.initialize().then(async () => {
             } 
         });
     })
-
-    const cors = require('cors');
-    app.use(cors);
     
     // Todas as outras solicitações GET não tratadas retornarão nosso app em React
     //app.get('*', (req, res) => {

@@ -53,6 +53,8 @@ data_source_1.AppDataSource.initialize().then(function () { return __awaiter(voi
         path = require('path');
         // Fazer com que o Node sirva os arquivos do app em React criado
         app.use(express.static(path.resolve(__dirname, '../client/build')));
+        cors = require('cors');
+        app.use(cors);
         // register express routes from defined application routes
         routes_1.Routes.forEach(function (route) {
             app[route.method](route.route, function (req, res, next) { return __awaiter(void 0, void 0, void 0, function () {
@@ -76,8 +78,6 @@ data_source_1.AppDataSource.initialize().then(function () { return __awaiter(voi
                 });
             }); });
         });
-        cors = require('cors');
-        app.use(cors);
         // Todas as outras solicitações GET não tratadas retornarão nosso app em React
         //app.get('*', (req, res) => {
         //  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
