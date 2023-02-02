@@ -17,7 +17,7 @@
       "typescript": "^4.9.5"
    },
    "scripts": {
-      "start": "npm i @types/node && npm install && npx tsc && node build/index.js",
+      "start": "npm i --save-dev @types/node && npm install && npx tsc && node build/index.js",
       "build": "cd client && npm install && npm run build",
       "typeorm": "typeorm-ts-node-commonjs"
    }
